@@ -1240,6 +1240,26 @@ public final class LineageSettings {
                 new InclusiveIntegerRangeValidator(0, 17);
 
         /**
+         * Action to perform when three fingers swipe action is detected.
+         * (See KEY_THREE_FINGERS_SWIPE_ACTION for valid values)
+         */
+        public static final String KEY_THREE_FINGERS_SWIPE_ACTION = "three_fingers_swipe_action";
+
+        /** @hide */
+        public static final Validator KEY_THREE_FINGERS_SWIPE_ACTION_VALIDATOR =
+                new InclusiveIntegerRangeValidator(0, 17);
+
+        /**
+         * Action to perform when three fingers long press action is detected.
+         * (See KEY_THREE_FINGERS_LONG_PRESS_ACTION for valid values)
+         */
+        public static final String KEY_THREE_FINGERS_LONG_PRESS_ACTION = "three_finger_long_press_action";
+
+        /** @hide */
+        public static final Validator KEY_THREE_FINGERS_LONG_PRESS_ACTION_VALIDATOR =
+                new InclusiveIntegerRangeValidator(0, 17);
+
+        /**
          * Whether to wake the screen with the home key, the value is boolean.
          * 0 = 0ff, 1 = on
          */
@@ -2149,6 +2169,8 @@ public final class LineageSettings {
             VALIDATORS.put(KEY_APP_SWITCH_LONG_PRESS_ACTION,
                     KEY_APP_SWITCH_LONG_PRESS_ACTION_VALIDATOR);
             VALIDATORS.put(KEY_EDGE_LONG_SWIPE_ACTION, KEY_EDGE_LONG_SWIPE_ACTION_VALIDATOR);
+            VALIDATORS.put(KEY_THREE_FINGERS_SWIPE_ACTION, KEY_THREE_FINGERS_SWIPE_ACTION_VALIDATOR);
+            VALIDATORS.put(KEY_THREE_FINGERS_LONG_PRESS_ACTION, KEY_THREE_FINGERS_LONG_PRESS_ACTION_VALIDATOR);
             VALIDATORS.put(HOME_WAKE_SCREEN, HOME_WAKE_SCREEN_VALIDATOR);
             VALIDATORS.put(ASSIST_WAKE_SCREEN, ASSIST_WAKE_SCREEN_VALIDATOR);
             VALIDATORS.put(APP_SWITCH_WAKE_SCREEN, APP_SWITCH_WAKE_SCREEN_VALIDATOR);
